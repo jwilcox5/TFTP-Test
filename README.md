@@ -4,7 +4,7 @@ Write a file transfer program. To demonstrate, you'll need a client and a server
 - The server awaits connections.
 - A client connects, and indicates the name of a file to upload or download.
 - The client sends or receives the file.
-- 
+  
 Wherever applicable, use the commands and protocol for TFTP (IETF RFC 1350), with the following modifications. You will need to design and use additional packet header information than that in TFTP; use the IETF 2347 TFTP Options Extension when possible.
 - Use TCP-style sliding windows rather than the sequential acks used in TFTP. Test with at least two different max window sizes.
 - Arrange that each session begins with a sender ID and (random) number exchange to generate a key to be used for encrypting data. You can use Xor to create key, or anything better, and use this as the basis for randomized xoring or similar protocols.
